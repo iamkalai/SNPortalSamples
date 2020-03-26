@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2020-03-24 15:36:31">
+<sp_widget action="INSERT_OR_UPDATE">
+<category>other</category>
+<client_script><![CDATA[function ($scope, spUIActionsExecuter, spUtil) {
+	var c = this;
+	
+	var ESIGNATURE = {
+		"approved": "cbfe291147220100ba13a5554ee4904d",
+		"rejected": "580f711147220100ba13a5554ee4904b"
+	};
+	
+	spUtil.recordWatch($scope, "sysapproval_approver", "state=requested^sys_id="+ c.data.sys_id);
+
+	c.action = function(state) {
+		if(c.data.esignature.e_sig_required) {
+			var requestParams = {
+				username: c.data.esignature.username,
+				userSysId: c.data.esignature.userSysId
+			};
+			spUIActionsExecuter.executeFormAction(ESIGNATURE[state], "sysapproval_approver" , c.data.sys_id, [] , "", requestParams).then(function(response) {
+				});
+		} else {
+				c.data.op = state;
+				c.server.update().then(function() {
+					if (!c.data.updateID) // update failed
+						spUtil.addErrorMessage(c.data.actionPreventedMsg);
+					else
+						c.data.state = state;
+				});
+		}
+	}	
+}]]></client_script>
+<controller_as>c</controller_as>
+<css>.question {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.spacer {
+  display:inline-block;
+  width:5%;
+}
+
+.btn-question {
+	width: 45%;
+}</css>
+<data_table>sp_instance</data_table>
+<demo_data>{
+  "data": {
+    "fields": [
+      {
+        "type": "glide_date_time",
+        "value": "2016-01-31T17:33:54+00:00",
+        "label": "Approval Example Label"
+      }
+    ],
+    "state": "requested",
+    "label": "incident"
+  },
+  "options": {
+    "color": "default"
+  }
+}</demo_data>
+<description>This is a clone of  approval info widget and allows approvers to add comments.</description>
+<docs display_value=""/>
+<field_list>color</field_list>
+<has_preview>true</has_preview>
+<id>approval_info_with_comments</id>
+<internal>false</internal>
+<link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+<name>Approval Info With Comments</name>
+<option_schema/>
+<public>false</public>
+<roles/>
+<script><![CDATA[(function() {
+	data.actionPreventedMsg = gs.getMessage("Update failed");
+	var gr = $sp.getRecord();
+	if (gr == null || !gr.isValid()) {
+		data.isValid = false;
+		return;
+	}
+	
+	data.isValid = true;
+	data.isMine = isApprovalMine(gr);
+	var userApprovalAccess = gs.hasRole("approval_admin") || (gs.hasRole("approver_user") && data.isMine);
+	
+	var approverDisplay = gr.approver.getDisplayValue();
+	if (!data.isMine && approverDisplay)
+		data.approverDisplay = approverDisplay;
+	
+	if (approverDisplay) {
+		data.approvedMsg = gs.getMessage("Approved by {0}", approverDisplay);
+		data.rejectedMsg = gs.getMessage("Rejected by {0}", approverDisplay);
+	} else {
+		data.approvedMsg = gs.getMessage("Approved");
+		data.rejectedMsg = gs.getMessage("Rejected");
+	}
+	if (input && input.op && userApprovalAccess) {
+		gr.state = input.op;
+		data.updateID = gr.update();
+		if (GlideStringUtil.nil(data.updateID)) {
+			// update failed so fetch again for correct values
+			gr = $sp.getRecord();
+		}
+		data.op = "";
+	}
+
+	var fields = $sp.getFields(gr, 'state,sys_created_on');
+
+	if (gr.sys_mod_count > 0)
+		fields.push($sp.getField(gr, 'sys_updated_on'));
+
+	data.fields = fields;
+	data.state = gr.state.toString();
+	data.sys_updated_on = gr.sys_updated_on.toString();
+	data.sys_id = gr.getUniqueValue();
+	data.table = gr.getTableName();
+	data.label = getRecordBeingApproved(gr).getLabel();
+	
+	//Customization to get the approval record related details
+	data.approvingRecordID = getRecordBeingApproved(gr).getUniqueValue();
+	data.approvingRecordDisplayValue = getRecordBeingApproved(gr).getDisplayValue();
+	data.approvingRecordTable = getRecordBeingApproved(gr).getTableName();
+	//Customization ends
+	
+	data.esignature = {
+		username:  gs.getUserName(),
+		userSysId: gs.getUserID(),
+		e_sig_required: checkESig(gr)
+};
+	function checkESig(approvalGR) {
+		var esigRegistryGR = new GlideRecord("e_signature_registry");
+		if (!esigRegistryGR.isValid())
+			return false;
+		
+		var table = approvalGR.getValue("source_table");
+		if (!table)
+			table = approvalGR.sysapproval.sys_class_name;
+		if (!table)
+			return false;
+		
+		esigRegistryGR.addQuery("enabled", "true");
+		esigRegistryGR.addQuery("table_name", table);
+		esigRegistryGR.query();
+		return esigRegistryGR.hasNext();
+	}
+	
+	function getRecordBeingApproved(gr) {
+		if (!gr.sysapproval.nil())
+			return gr.sysapproval.getRefRecord();
+
+		return gr.document_id.getRefRecord();
+	}
+})();
+]]></script>
+<servicenow>false</servicenow>
+<sys_class_name>sp_widget</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-03-24 07:48:47</sys_created_on>
+<sys_customer_update>false</sys_customer_update>
+<sys_id>2019e4301bf780108ed631d7dc4bcb4e</sys_id>
+<sys_mod_count>2</sys_mod_count>
+<sys_name>Approval Info With Comments</sys_name>
+<sys_package display_value="Global" source="global">global</sys_package>
+<sys_policy/>
+<sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+<sys_scope display_value="Global">global</sys_scope>
+<sys_update_name>sp_widget_2019e4301bf780108ed631d7dc4bcb4e</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-03-24 07:54:10</sys_updated_on>
+<template><![CDATA[<div ng-if="c.data.isValid" class="panel panel-{{::c.options.color}} b">
+  <div class="panel-heading">
+    <h4 class="panel-title" ng-if="c.data.isMine && (c.data.state == 'requested')">${This {{c.data.label}} requires your approval}</h4>
+    <h4 class="panel-title" ng-if="!c.data.isMine && (c.data.state == 'requested')">${This {{c.data.label}} requires approval <span ng-if="c.data.approverDisplay"> by {{c.data.approverDisplay}}}</span></h4>
+    <h4 class="panel-title" ng-if="c.data.state == 'approved'">{{data.approvedMsg}}</h4>
+    <h4 class="panel-title" ng-if="c.data.state == 'rejected'">{{data.rejectedMsg}}</h4>
+  </div>  
+  <div class="panel-body">
+    <form ng-submit="$event.preventDefault()" class="form-horizontal">
+      <div ng-if="c.data.fields.length > 0">
+        <!-- Customization - to add approval record link -->
+                <div class="m-b-xs" ng-if="c.data.approvingRecordID">
+                    <label class="m-n">Approving</label>
+                    <span>
+                        <div>
+                            <a href="/sp?id=ticket&table={{c.data.approvingRecordTable}}&sys_id={{c.data.approvingRecordID}}">{{c.data.approvingRecordDisplayValue}}</a>
+                        </div>
+                    </span>
+                </div>
+                <!-- Customization - ends -->
+        <div ng-repeat="field in c.data.fields" class="m-b-xs" ng-if="field.value">
+          <label class="m-n">{{field.label}}</label>
+          <span ng-switch="field.type">
+            <div ng-switch-when="glide_date_time" title="{{field.display_value}}"><sn-time-ago timestamp="::field.value" /></div>
+            <div ng-switch-default >{{field.display_value}}</div>
+          </span>
+        </div>
+      </div>
+      <!-- Customization - allow comments to be added by the approver -->
+            <div style="padding-top:20px;">
+                <textarea ng-attr-placeholder="Add approval comment here" style="resize: none; overflow: hidden; overflow-wrap: break-word; height: 54px;" ng-if="c.data.isMine && (c.data.state == 'requested')" field="field" name="approval_comment" id="approval_comment" class="form-control ng-scope ng-isolate-scope ng-empty ng-valid ng-touched" ng-model="c.data.approval_comment" data-type="textarea" role="textbox" aria-invalid="false"></textarea>
+            </div>
+            <!-- Customization ends -->
+      <div ng-if="c.data.isMine && (c.data.state == 'requested')" class="question">
+        <button type="button" name="approve" class="btn btn-primary btn-question" ng-click="c.action('approved')">${Approve}</button>
+        <div class="spacer"></div>
+        <button type="button" name="reject" class="btn btn-default btn-question" ng-click="c.action('rejected')">${Reject}</button>
+      </div>
+    </form>
+  </div>  
+</div>]]></template>
+</sp_widget>
+</unload>
