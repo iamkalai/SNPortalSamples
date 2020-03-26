@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2020-03-26 15:51:17">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description/>
+<inserted/>
+<name>Bootstrap Toggle</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>2f6c38891b3300108ed631d7dc4bcb98</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-03-26 15:51:16</sys_created_on>
+<sys_id>e3aa60e91b73c0108ed631d7dc4bcbaa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-03-26 15:51:16</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sp_widget_74acbc891b3300108ed631d7dc4bcbe9</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function() {
+  /* widget controller */
+  var c = this;
+	$(function() {
+    $('#toggle-one').bootstrapToggle();
+  });
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css/&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;bootstrap_toggle&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) { 
+
+ }]]&gt;&lt;/link&gt;&lt;name&gt;Bootstrap Toggle&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-03-25 03:54:04&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;74acbc891b3300108ed631d7dc4bcbe9&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_name&gt;Bootstrap Toggle&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_74acbc891b3300108ed631d7dc4bcbe9&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-03-25 04:38:56&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;input id="toggle-one" checked type="checkbox"&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+<payload_hash>1473792351</payload_hash>
+<remote_update_set display_value="Bootstrap Toggle">e3aa60e91b73c0108ed631d7dc4bcbaa</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-03-26 15:51:16</sys_created_on>
+<sys_id>27aae4e91b73c0108ed631d7dc4bcbb2</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1710ffc78d00000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-03-26 15:51:16</sys_updated_on>
+<table/>
+<target_name>Bootstrap Toggle</target_name>
+<type>Widget</type>
+<update_domain>global</update_domain>
+<update_guid>5137858107730010f6bfb644b2fd69ce</update_guid>
+<update_guid_history>5137858107730010f6bfb644b2fd69ce:1473792351,0692c581ad730010bda6c3ed7a33a62b:-900162316,5da001cd6b330010cb9e9161e8c9e976:-784080685,a39f30cd0f3300109a74c766ad8c949c:491530522,f30ff08d493300108674c5e8e044d2a8:1048975433,f75efcc996330010ed9d37fb40d955fe:-579334767,2b2eb04d223300104b209b5e9fa401a6:230365258,8c0e7c0d95330010f9e3867c0b540a57:977842243,ccfc3c450f3300109469d23f647f0cb0:951330081</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>m2m_sp_widget_dependency_afc7c50d1b7300108ed631d7dc4bcb64</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_widget_dependency"><m2m_sp_widget_dependency action="INSERT_OR_UPDATE"><sp_dependency display_value="Bootstrap Toogle">b26d7c891b3300108ed631d7dc4bcbeb</sp_dependency><sp_widget display_value="Bootstrap Toggle">74acbc891b3300108ed631d7dc4bcbe9</sp_widget><sys_class_name>m2m_sp_widget_dependency</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-03-25 04:41:33</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>afc7c50d1b7300108ed631d7dc4bcb64</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Bootstrap Toogle.Bootstrap Toggle</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Global">global</sys_scope><sys_update_name>m2m_sp_widget_dependency_afc7c50d1b7300108ed631d7dc4bcb64</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-03-25 04:41:33</sys_updated_on></m2m_sp_widget_dependency></record_update>]]></payload>
+<payload_hash>1747396934</payload_hash>
+<remote_update_set display_value="Bootstrap Toggle">e3aa60e91b73c0108ed631d7dc4bcbaa</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-03-26 15:51:16</sys_created_on>
+<sys_id>2baae4e91b73c0108ed631d7dc4bcbb1</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1710ffedf2f0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-03-26 15:51:16</sys_updated_on>
+<table/>
+<target_name>Bootstrap Toogle.Bootstrap Toggle</target_name>
+<type>Widget Dependency</type>
+<update_domain>global</update_domain>
+<update_guid>abc7c50d7d7300108e5aea52d52dc366</update_guid>
+<update_guid_history>abc7c50d7d7300108e5aea52d52dc366:1747396934</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sp_js_include_7fbdbc0d1b3300108ed631d7dc4bcbe7</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_js_include"><sp_js_include action="INSERT_OR_UPDATE"><display_name>https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js</display_name><source>url</source><sys_class_name>sp_js_include</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-03-25 03:58:13</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>7fbdbc0d1b3300108ed631d7dc4bcbe7</sys_id><sys_mod_count>2</sys_mod_count><sys_name>https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Global">global</sys_scope><sys_ui_script/><sys_update_name>sp_js_include_7fbdbc0d1b3300108ed631d7dc4bcbe7</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-03-25 04:44:29</sys_updated_on><url>https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js</url></sp_js_include></record_update>]]></payload>
+<payload_hash>1767478441</payload_hash>
+<remote_update_set display_value="Bootstrap Toggle">e3aa60e91b73c0108ed631d7dc4bcbaa</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-03-26 15:51:16</sys_created_on>
+<sys_id>63aae4e91b73c0108ed631d7dc4bcbb2</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>17110018ea90000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-03-26 15:51:16</sys_updated_on>
+<table/>
+<target_name>https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js</target_name>
+<type>JS Include</type>
+<update_domain>global</update_domain>
+<update_guid>2278090d007300104f1fe49f98bc8fd0</update_guid>
+<update_guid_history>2278090d007300104f1fe49f98bc8fd0:1767478441,48cef88d8f3300100fb0b704f581f2a7:931488247,b8edb4c96c330010b805208a5b5d25ea:1767478441</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>m2m_sp_dependency_js_include_bcedb04d1b3300108ed631d7dc4bcb9c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_dependency_js_include"><m2m_sp_dependency_js_include action="INSERT_OR_UPDATE"><order>100</order><sp_dependency display_value="Bootstrap Toogle">b26d7c891b3300108ed631d7dc4bcbeb</sp_dependency><sp_js_include display_value="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js">7fbdbc0d1b3300108ed631d7dc4bcbe7</sp_js_include><sys_class_name>m2m_sp_dependency_js_include</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-03-25 03:58:13</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>bcedb04d1b3300108ed631d7dc4bcb9c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Bootstrap Toogle.https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Global">global</sys_scope><sys_update_name>m2m_sp_dependency_js_include_bcedb04d1b3300108ed631d7dc4bcb9c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-03-25 03:58:13</sys_updated_on></m2m_sp_dependency_js_include></record_update>]]></payload>
+<payload_hash>1616708213</payload_hash>
+<remote_update_set display_value="Bootstrap Toggle">e3aa60e91b73c0108ed631d7dc4bcbaa</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-03-26 15:51:16</sys_created_on>
+<sys_id>67aae4e91b73c0108ed631d7dc4bcbb1</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1710fd731b40000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-03-26 15:51:16</sys_updated_on>
+<table/>
+<target_name>Bootstrap Toogle.https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js</target_name>
+<type>Dependency JS Includes</type>
+<update_domain>global</update_domain>
+<update_guid>b8edb04da43300103741a52192e79a9e</update_guid>
+<update_guid_history>b8edb04da43300103741a52192e79a9e:1616708213</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>m2m_sp_dependency_css_include_f0bd7c0d1b3300108ed631d7dc4bcb51</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_dependency_css_include"><m2m_sp_dependency_css_include action="INSERT_OR_UPDATE"><order>100</order><sp_css_include display_value="Bootstrap Toggle CSS">5f9df80d1b3300108ed631d7dc4bcb0d</sp_css_include><sp_dependency display_value="Bootstrap Toogle">b26d7c891b3300108ed631d7dc4bcbeb</sp_dependency><sys_class_name>m2m_sp_dependency_css_include</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-03-25 03:57:24</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>f0bd7c0d1b3300108ed631d7dc4bcb51</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Bootstrap Toggle CSS.Bootstrap Toogle</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Global">global</sys_scope><sys_update_name>m2m_sp_dependency_css_include_f0bd7c0d1b3300108ed631d7dc4bcb51</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-03-25 03:57:24</sys_updated_on></m2m_sp_dependency_css_include></record_update>]]></payload>
+<payload_hash>-913958935</payload_hash>
+<remote_update_set display_value="Bootstrap Toggle">e3aa60e91b73c0108ed631d7dc4bcbaa</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-03-26 15:51:16</sys_created_on>
+<sys_id>6baa60e91b73c0108ed631d7dc4bcbaa</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1710fd671d10000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-03-26 15:51:16</sys_updated_on>
+<table/>
+<target_name>Bootstrap Toggle CSS.Bootstrap Toogle</target_name>
+<type>Dependency CSS Includes</type>
+<update_domain>global</update_domain>
+<update_guid>fcbd7c0dfe330010e0dafe1fe001c952</update_guid>
+<update_guid_history>fcbd7c0dfe330010e0dafe1fe001c952:-913958935</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sp_dependency_b26d7c891b3300108ed631d7dc4bcbeb</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_dependency"><sp_dependency action="INSERT_OR_UPDATE"><module/><name>Bootstrap Toogle</name><page_load>true</page_load><sp_portals/><sys_class_name>sp_dependency</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-03-25 03:56:48</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>b26d7c891b3300108ed631d7dc4bcbeb</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Bootstrap Toogle</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Global">global</sys_scope><sys_update_name>sp_dependency_b26d7c891b3300108ed631d7dc4bcbeb</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-03-25 03:56:48</sys_updated_on></sp_dependency></record_update>]]></payload>
+<payload_hash>-1738591094</payload_hash>
+<remote_update_set display_value="Bootstrap Toggle">e3aa60e91b73c0108ed631d7dc4bcbaa</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-03-26 15:51:16</sys_created_on>
+<sys_id>afaae4e91b73c0108ed631d7dc4bcbb1</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1710fd5e6070000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-03-26 15:51:16</sys_updated_on>
+<table/>
+<target_name>Bootstrap Toogle</target_name>
+<type>Widget Dependency</type>
+<update_domain>global</update_domain>
+<update_guid>809dfc892c33001033086bc65a683c09</update_guid>
+<update_guid_history>809dfc892c33001033086bc65a683c09:-1738591094</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sp_css_include_5f9df80d1b3300108ed631d7dc4bcb0d</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_css_include"><sp_css_include action="INSERT_OR_UPDATE"><name>Bootstrap Toggle CSS</name><source>url</source><sp_css/><sys_class_name>sp_css_include</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-03-25 03:57:24</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>5f9df80d1b3300108ed631d7dc4bcb0d</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Bootstrap Toggle CSS</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Global">global</sys_scope><sys_update_name>sp_css_include_5f9df80d1b3300108ed631d7dc4bcb0d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-03-25 04:44:51</sys_updated_on><url>https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css</url></sp_css_include></record_update>]]></payload>
+<payload_hash>2139480366</payload_hash>
+<remote_update_set display_value="Bootstrap Toggle">e3aa60e91b73c0108ed631d7dc4bcbaa</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-03-26 15:51:16</sys_created_on>
+<sys_id>ebaae4e91b73c0108ed631d7dc4bcbb1</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1711001e3a40000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-03-26 15:51:16</sys_updated_on>
+<table/>
+<target_name>Bootstrap Toggle CSS</target_name>
+<type>CSS Include</type>
+<update_domain>global</update_domain>
+<update_guid>b3884d8dea730010e3dc8e8797a65922</update_guid>
+<update_guid_history>b3884d8dea730010e3dc8e8797a65922:2139480366,32de7c4d80330010d0b7ad6876fb53b4:-2035009630,f4bdf8c9ad33001089be47a575c84f56:2139480366</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
