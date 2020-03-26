@@ -6,4 +6,4 @@
 
 ### Installation
 
-- Import the updateset found in **dist** folder. A widget called **Bootstrap Toggle* will be created with required dependencies.
+- Import the updateset found in **dist** folder. A widget called **Bootstrap Toggle** will be created with required dependencies.

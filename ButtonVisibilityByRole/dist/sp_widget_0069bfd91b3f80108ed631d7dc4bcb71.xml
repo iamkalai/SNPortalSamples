@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2020-03-26 12:43:54">
+<sp_widget action="INSERT_OR_UPDATE">
+<category>custom</category>
+<client_script><![CDATA[function(glideUserSession) {
+  /* widget controller */
+  var c = this;
+	glideUserSession.loadCurrentUser().then(function(currentUser) {
+	c.disabled = currentUser.hasRole('itil');
+	});
+}]]></client_script>
+<controller_as>c</controller_as>
+<css/>
+<data_table>sp_instance</data_table>
+<demo_data/>
+<description/>
+<docs display_value=""/>
+<field_list/>
+<has_preview>false</has_preview>
+<id>role-restricted</id>
+<internal>false</internal>
+<link><![CDATA[function link(scope, element, attrs, controller) { 
+
+ }]]></link>
+<name>Role Restricted</name>
+<option_schema/>
+<public>false</public>
+<roles/>
+<script><![CDATA[(function() {
+    /* populate the 'data' object */
+    /* e.g., data.table = $sp.getValue('table'); */
+    data.disabled = gs.hasRole('itil');
+	
+})();]]></script>
+<servicenow>false</servicenow>
+<sys_class_name>sp_widget</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-03-26 12:17:23</sys_created_on>
+<sys_customer_update>false</sys_customer_update>
+<sys_id>0069bfd91b3f80108ed631d7dc4bcb71</sys_id>
+<sys_mod_count>7</sys_mod_count>
+<sys_name>Role Restricted</sys_name>
+<sys_package display_value="Global" source="global">global</sys_package>
+<sys_policy/>
+<sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+<sys_scope display_value="Global">global</sys_scope>
+<sys_update_name>sp_widget_0069bfd91b3f80108ed631d7dc4bcb71</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-03-26 12:39:54</sys_updated_on>
+<template><![CDATA[<div>
+  <button ng-if='c.data.disabled'>With Server Data</button>
+  <button ng-if='c.disabled'>With Client Data</button>
+</div>]]></template>
+</sp_widget>
+</unload>

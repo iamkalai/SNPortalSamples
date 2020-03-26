@@ -10,5 +10,5 @@ I was looking for approval widget that could allow the users to add comment and 
 
 ### Installation
 
-- Import the widget found in **dist** folder. The widget is called Approval Info With Comments.
+- Import the widget found in **dist** folder. The widget is called **Approval Info With Comments**.
 - Add the newly imported widget to the approval or any other service portal page you want.
