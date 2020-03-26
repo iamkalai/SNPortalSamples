@@ -6,7 +6,7 @@
 
 I was looking for approval widget that could allow the users to add comment and noticed the share item 'Approve with a comment'. The share item seems to be using different styling and some additional functionality which I did not require. This widget just follows the same styling of OOB approval info widget and just adds a link to the record being approved and a box for adding comments.
 
-![Simple Approval Widget With Comment](https://github.com/iamkalai/SNSimpleApprovalWidgetWithComment/blob/master/SimpleApprovalWidget/doc/images/approval_widget.png)
+![Simple Approval Widget With Comment](/doc/images/approval_widget.png)
 
 ### Installation
 
