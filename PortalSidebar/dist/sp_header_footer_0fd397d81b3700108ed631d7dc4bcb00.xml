@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2020-04-20 16:46:01">
+<sp_header_footer action="INSERT_OR_UPDATE">
+<category>custom</category>
+<client_script><![CDATA[function() {
+    /* widget controller */
+    var c = this;
+    $('#platform').tooltip();
+    $('#contact-us').tooltip();
+    $('#sn-help').tooltip();
+    $('#feedback').tooltip();
+}]]></client_script>
+<controller_as>c</controller_as>
+<css>#sidenav a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    position: fixed;
+    right: 15px;
+    border: 2px solid #c2e9fb;
+    font-family: SourceSansPro, Helvetica, Arial, sans-serif;
+    width: 50px
+}
+
+#platform {
+    top: calc(50% - 90px);
+}
+
+#contact-us {
+    top: calc(50% - 45px);
+}
+
+#sn-help {
+    top: calc(50%);
+}
+
+#feedback {
+    top: calc(50% + 45px);
+}</css>
+<data_table>sp_instance</data_table>
+<demo_data/>
+<description/>
+<docs display_value=""/>
+<field_list/>
+<has_preview>true</has_preview>
+<id>sidebar</id>
+<internal>false</internal>
+<link><![CDATA[function link(scope, element, attrs, controller) { 
+
+ }]]></link>
+<name>Sidebar</name>
+<option_schema/>
+<public>false</public>
+<roles/>
+<script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+<servicenow>false</servicenow>
+<sys_class_name>sp_header_footer</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-03-23 06:58:58</sys_created_on>
+<sys_customer_update>false</sys_customer_update>
+<sys_id>0fd397d81b3700108ed631d7dc4bcb00</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_name>Sidebar</sys_name>
+<sys_package display_value="Global" source="global">global</sys_package>
+<sys_policy/>
+<sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+<sys_scope display_value="Global">global</sys_scope>
+<sys_update_name>sp_header_footer_0fd397d81b3700108ed631d7dc4bcb00</sys_update_name>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-03-23 06:58:58</sys_updated_on>
+<template><![CDATA[<div class="container" id="sidenav">
+    <a href="#" target="_blank" class="btn btn-primary" role="button" aria-pressed="true" id="platform" data-toggle="tooltip" data-placement="left" data-original-title="Classic Platform"><i class="fa fa-globe fa-2x" aria-hidden="true"></i></a>
+    <a href="#" class="btn btn-primary" role="button" aria-pressed="true" id="contact-us" data-toggle="tooltip" data-placement="left" data-original-title="Contact US"><i class="fa fa-phone fa-2x" aria-hidden="true"></i></a>
+    <a href="#" target="_blank" class="btn btn-primary" role="button" aria-pressed="true" id="sn-help" data-toggle="tooltip" data-placement="left" data-original-title="ServiceNow Help"><i class="fa fa-info-circle fa-2x" aria-hidden="true"></i></a>
+    <a href="#" target="_blank" class="btn btn-primary" role="button" aria-pressed="true" id="feedback" data-toggle="tooltip" data-placement="left" data-original-title="Site Feedback"><i class="fa fa-commenting-o fa-2x" aria-hidden="true"></i></a>
+</div>]]></template>
+</sp_header_footer>
+</unload>
