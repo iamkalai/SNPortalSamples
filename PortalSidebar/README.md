@@ -2,7 +2,7 @@
 
 ## Description
 
-**_This contains a service portal footer sidebar sample_**
+**_This contains a service portal footer sidebar sample._**
 
 ### Installation
 
